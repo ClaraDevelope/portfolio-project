@@ -203,3 +203,5 @@ export const TECHNOLOGIES = {
     }
   ]
 };
+
+export const aboutMe = 'Soy una persona que encuentra en el desarrollo de software una forma de crear conexiones y resolver necesidades reales. Cada aplicación web que construyo representa una oportunidad para diseñar experiencias que no solo sean funcionales, sino también significativas para quienes las usan. Me esfuerzo por mantener un equilibrio entre la eficiencia técnica y el impacto humano, porque creo que una solución no se mide solo por su funcionamiento, sino por cómo mejora la vida de las personas. Para mí, el proceso importa tanto como el resultado: cada línea de código es un paso hacia construir algo más que tecnología, un puente entre las ideas y quienes las harán parte de su día a día.'

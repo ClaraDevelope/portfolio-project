@@ -9,7 +9,8 @@ export default function renderIntro() {
           </div>
           <div class="text-content">
             <h1>Hola, soy Clara Manzano</h1>
-            <p>Desarrolladora web full-stack | Apasionada por la tecnología y el desarrollo sostenible. <br> Cada línea es un latido, y cada proyecto, una historia. ¿Construimos la siguiente?</p>
+            <h3>Desarrolladora web full-stack</h3>
+            <p>Apasionada por la tecnología y el desarrollo sostenible. <br> Cada línea es un latido, y cada proyecto, una historia. ¿Construimos la siguiente?</p>
             <div class="btn-container">
               <a href="https://github.com/tu-github" target="_blank" class="btn-rrss"><i class="fab fa-github"></i></a>
               <a href="https://www.linkedin.com/in/tu-linkedin" target="_blank" class="btn-rrss"><i class="fab fa-linkedin"></i></a>
