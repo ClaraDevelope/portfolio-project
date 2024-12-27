@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #121212;
+  background: linear-gradient(135deg, #1a1a1a, #121212);
   color: #fff;
   line-height: 1.6;
 }
@@ -73,12 +73,39 @@ nav ul li a:hover {
 
 /* Sección de bienvenida */
 .intro {
-  background: linear-gradient(135deg, #5f4b8b, #e63946);
+  background: linear-gradient(135deg, #1e1234, #6f1b2d);
   padding: 100px 0;
   text-align: center;
   position: relative;
-  color: #fff;
+  color: #d9d6d6;
   overflow: hidden;
+}
+
+.intro::before,
+.intro::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle farthest-side,
+    rgba(255, 0, 182, 0.1),
+    rgba(0, 0, 0, 0)
+  );
+  z-index: 1;
+}
+
+.intro::before {
+  width: 500px;
+  height: 500px;
+  top: -10%;
+  left: -20%;
+}
+
+.intro::after {
+  width: 500px;
+  height: 500px;
+  top: -10%;
+  right: -20%;
 }
 
 .intro .container {
@@ -124,7 +151,7 @@ nav ul li a:hover {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .text-content h3 {
-  color: #ffc8a2;
+  color: #f2a900;
   font-weight: 500;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
@@ -137,14 +164,14 @@ nav ul li a:hover {
 
 .btn-container {
   display: flex;
-  gap: 10px;
+  gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .btn-rrss {
   padding: 13px 20px;
-  background: linear-gradient(135deg, #333f63, #1f2a41);
+  background: linear-gradient(135deg, #4a5d7a, #2a3c58);
   color: white;
   text-decoration: none;
   border-radius: 5spx;
@@ -157,7 +184,6 @@ nav ul li a:hover {
 
 .btn-rrss:hover {
   background: linear-gradient(135deg, #1f2a41, #333f63);
-  transform: translateY(-2px);
 }
 
 .btn-rrss:focus {
@@ -166,13 +192,17 @@ nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
-  .intro {
+  /* .intro {
     background: url('/background-image-dark.webp');
     background-size: cover;
     background-position: center;
+  } */
+  .intro {
+    height: 800px;
   }
   .intro-content {
     gap: 20px;
+    padding: 0 3px;
   }
 
   .avatar-container {
@@ -189,13 +219,13 @@ nav ul li a:hover {
   }
 
   .btn-rrss {
-    padding: 10px 25px;
+    margin-top: 1rem;
+    padding: 18px 25px;
   }
 }
 
 .about {
   padding: 60px 20px;
-  background-color: #1e1e1e;
   text-align: center;
 }
 
@@ -210,11 +240,18 @@ nav ul li a:hover {
   color: #d1d1d1;
   max-width: 800px;
   margin: 0 auto;
+  text-wrap: balance;
+  margin-bottom: 15px;
 }
-
+.about strong {
+  color: #f2a900;
+}
+.about img {
+  width: 175px;
+  height: 175px;
+}
 .projects {
   padding: 3rem 2rem;
-  background-color: #1a1a1a;
   text-align: center;
 }
 
@@ -233,20 +270,52 @@ nav ul li a:hover {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: calc(33.33% - 1.5rem);
+  min-width: 300px;
   position: relative;
 }
 
 .project-item:hover {
-  transform: translateY(-5px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
 }
 
-.project-img {
+.project-img-container {
+  position: relative;
   width: 100%;
   height: 220px;
-  object-fit: cover;
+  overflow: hidden;
   border-radius: 10px;
-  margin-bottom: 1.5rem;
+}
+
+.project-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.first-img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.second-img {
+  opacity: 0;
+  transform: scale(1.05);
+  visibility: hidden;
+}
+
+.project-item:hover .first-img {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.project-item:hover .second-img {
+  opacity: 1;
+  transform: scale(1.1);
+  visibility: visible;
 }
 
 h3 {
@@ -260,16 +329,39 @@ h3 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin: 1rem;
-  margin-bottom: 3.5rem;
+  margin: 1.5rem;
+  margin-bottom: 5rem;
 }
 
-.tech-img {
-  width: 30px;
-  height: 30px;
+.badge {
+  display: inline-flex;
+  height: 100%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid #605d5d;
+  background: linear-gradient(110deg, #2a3554 45%, #253956 55%, #2a3e61);
+  pointer-events: none;
+  background-size: 250% 100%;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #d3d3d3;
+  animation: background-shine 2s infinite;
+}
+
+@keyframes background-shine {
+  0% {
+    background-position: 250% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 .project-actions {
+  margin-bottom: 0.5rem;
   position: absolute;
   bottom: 0;
 }
@@ -277,10 +369,10 @@ h3 {
 .btn-primary,
 .btn-secondary {
   text-decoration: none;
-  padding: 1rem 2rem;
-  margin: 0.5rem;
+  padding: 0.5rem 2rem;
   border-radius: 6px;
   font-weight: bold;
+  margin: 1rem;
   display: inline-block;
 }
 
@@ -296,12 +388,25 @@ h3 {
 
 .btn-primary:hover,
 .btn-secondary:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1385px) {
   .project-item {
     width: calc(50% - 1.5rem);
+  }
+  .tech-stack {
+    margin-bottom: 7.5rem;
+  }
+  .btn-primary,
+  .btn-secondary {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-item {
+    width: 100%;
   }
   .project-actions {
     position: absolute;
@@ -313,26 +418,20 @@ h3 {
   }
   .btn-primary,
   .btn-secondary {
-    padding: 5px 10px;
+    padding: 8px 12px;
     border-radius: 6px;
     font-weight: bold;
     font-size: 14px;
+    margin-left: 0.7rem;
+    margin-bottom: 3rem;
   }
-}
-
-@media (max-width: 480px) {
-  .project-item {
-    width: 100%;
-  }
-  .project-actions {
-    position: absolute;
-    bottom: 0;
+  .tech-stack {
+    margin-bottom: 5rem;
   }
 }
 
 .technologies {
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #1a1a1a, #121212);
   text-align: center;
 }
 
@@ -365,8 +464,8 @@ h3 {
 
 .tech-items {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+  gap: 1rem;
 }
 
 .tech-item {
@@ -379,15 +478,14 @@ h3 {
 }
 
 .tech-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.1);
 }
 
 .tech-icon {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .tech-item p {

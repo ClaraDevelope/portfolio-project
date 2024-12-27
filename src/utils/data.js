@@ -2,8 +2,9 @@ export const PROJECTS = [
   {
     name: 'Pinterest',
     description:
-      'Aplicación sencilla que permite a los usuarios buscar imágenes utilizando la API de Unsplash. Con una interfaz limpia y accesible, inspirada en Pinterest, los usuarios pueden ingresar términos de búsqueda para encontrar fotografías de alta calidad. La aplicación está diseñada para ofrecer una experiencia de navegación fluida, enfocándose en la usabilidad y la presentación visual de las imágenes encontradas.',
+      'Permite buscar imágenes mediante la API de Unsplash. Inspirada en Pinterest, los usuarios ingresan términos para encontrar fotos de alta calidad. Optimizada para una navegación fluida y visualmente atractiva',
     imgUrl: 'pinterest.webp',
+    imgUrl2: 'pinterest2.webp',
     gitHub: 'https://github.com/ClaraDevelope/pinterest',
     url: 'https://rococo-beignet-b1d97b.netlify.app/',
     technologies: [
@@ -25,8 +26,9 @@ export const PROJECTS = [
   {
     name: 'Games-Hub',
     description:
-      'Esta aplicación web incluye tres juegos: Memory, Tres en Raya y Trivial. Desarrollada con JavaScript, HTML y CSS, ofrece una interfaz responsiva y una experiencia de usuario interactiva. Memory desafía a los jugadores a emparejar tarjetas; Tres en Raya permite competir contra la máquina, y Trivial presenta preguntas en diversas categorías. La lógica del juego se implementa mediante eventos que mantienen el estado y facilitan la interacción.',
-    imgUrl: 'games-hub.webp',
+      'Incluye Memory, Tres en Raya y Trivial, desarrollados con JavaScript, HTML y CSS. Memory empareja tarjetas, Tres en Raya enfrenta al usuario contra la máquina, y Trivial ofrece preguntas categorizadas con lógica basada en eventos.',
+    imgUrl: 'games.webp',
+    imgUrl2:'games2.webp',
     url: 'https://games-hub-git-master-claras-projects-939a82ac.vercel.app/',
     gitHub: 'https://github.com/ClaraDevelope/gamesHub',
     technologies: [
@@ -48,8 +50,9 @@ export const PROJECTS = [
   {
     name: 'FandomFiesta',
     description:
-      'Aplicación que permite a los usuarios descubrir y asistir a eventos temáticos inspirados en series y películas como Friends, Paquita Salas y Marvel. Incluye un sistema de autenticación seguro para el registro y gestión de perfiles. Los usuarios pueden crear, editar y eliminar eventos, así como interactuar con otros fans, teniendo acceso a toda la información de sus actividades.',
-    imgUrl: 'fandomfiesta.png',
+      'Permite descubrir, crear y gestionar eventos inspirados en series y películas como Friends y Marvel. Incluye autenticación segura y funciones para editar perfiles e interactuar con otros usuarios.',
+      imgUrl: 'fandom.webp',
+      imgUrl2:'fandom2.webp',
     url: 'https://proyecto-10-enrutado-claras-projects-939a82ac.vercel.app/',
     gitHub: 'https://github.com/ClaraDevelope/proyecto-10-enrutado',
     technologies: [
@@ -83,8 +86,9 @@ export const PROJECTS = [
   {
     name: 'HelpyHub',
     description:
-      'Aplicación para conectar a personas interesadas en colaborar en proyectos sociales. Los usuarios pueden explorar diversas iniciativas, interactuar a través de comentarios y "likes", y construir conexiones significativas. Aunque no cuenta con backend, su interfaz intuitiva y herramientas de interacción ofrecen una experiencia dinámica y enriquecedora.',
-    imgUrl: 'helpy-hub.png',
+      'Facilita la conexión entre usuarios interesados en proyectos sociales. Permite explorar iniciativas, comentar, dar "likes" y construir redes. No tiene backend, pero ofrece herramientas para la interacción.',
+      imgUrl: 'helpy.webp',
+    imgUrl2:'helpy2.webp',
     url: 'https://helpy-hub-claras-projects-939a82ac.vercel.app/',
     gitHub: 'https://github.com/ClaraDevelope/HelpyHub',
     technologies: [
@@ -106,8 +110,9 @@ export const PROJECTS = [
   {
     name: 'MenstruApp',
     description:
-      'Aplicación web para el seguimiento menstrual que permite a los usuarios registrar ciclos, gestionar síntomas y realizar cálculos de salud relacionados. La plataforma incluye funcionalidades de chat para la interacción entre usuarios, así como la opción de publicar posts que fomentan la discusión sobre temas de salud menstrual. Diseñada con una interfaz intuitiva, MenstruApp optimiza la experiencia del usuario y ofrece herramientas para la gestión de la salud de manera accesible.',
-    imgUrl: 'mentruapp-img.png',
+      'MenstruApp registra ciclos, gestiona síntomas y realiza cálculos de salud. Incluye funcionalidades de chat y publicación de posts para fomentar la interacción entre usuarios interesados en temas de salud menstrual.',
+      imgUrl: 'menstru.webp',
+      imgUrl2:'menstru2.webp',
     url: 'https://frontend-13-claras-projects-939a82ac.vercel.app/',
     gitHub: 'https://github.com/ClaraDevelope/frontend-13',
     technologies: [
@@ -204,4 +209,6 @@ export const TECHNOLOGIES = {
   ]
 };
 
-export const aboutMe = 'Soy una persona que encuentra en el desarrollo de software una forma de crear conexiones y resolver necesidades reales. Cada aplicación web que construyo representa una oportunidad para diseñar experiencias que no solo sean funcionales, sino también significativas para quienes las usan. Me esfuerzo por mantener un equilibrio entre la eficiencia técnica y el impacto humano, porque creo que una solución no se mide solo por su funcionamiento, sino por cómo mejora la vida de las personas. Para mí, el proceso importa tanto como el resultado: cada línea de código es un paso hacia construir algo más que tecnología, un puente entre las ideas y quienes las harán parte de su día a día.'
+// export const aboutMe = 'Soy una persona que encuentra en el desarrollo de software una forma de crear conexiones y resolver necesidades reales. Cada aplicación web que construyo representa una oportunidad para diseñar experiencias que no solo sean funcionales, sino también significativas para quienes las usan. Me esfuerzo por mantener un equilibrio entre la eficiencia técnica y el impacto humano, porque creo que una solución no se mide solo por su funcionamiento, sino por cómo mejora la vida de las personas. Para mí, el proceso importa tanto como el resultado: cada línea de código es un paso hacia construir algo más que tecnología, un puente entre las ideas y quienes las harán parte de su día a día.'
+
+export const aboutMe = {p1: 'Me llamo Clara y, aunque mi camino hacia la programación no ha sido el más convencional, cada experiencia previa ha enriquecido mi forma de abordar este ámbito. Antes de centrarme en el desarrollo web, trabajé en sectores sociales y educativos, desde la educación social hasta la sexología, además de haber gestionado una librería-café como <strong>socia trabajadora de una cooperativa.</strong>' , p2:"Desde siempre me han interesado <strong> las metodologías como herramienta para estructurar y entender procesos</strong>. En el ámbito tecnológico, este interés se ha trasladado hacia enfoques como el <strong>desarrollo guiado por pruebas (TDD)</strong>, que plantea una forma de construir software de manera más consciente y orientada a resultados sólidos.", p3:"Cuando no estoy programando, toco en una batucada de música afrobrasileña, participo en <strong>actividades culturales y sociales</strong> de mi ciudad, me gusta leer sobre diferentes temas y disfrutar de series y películas."}

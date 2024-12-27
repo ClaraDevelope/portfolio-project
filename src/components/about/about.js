@@ -6,7 +6,10 @@ export default function renderAbout() {
     <section class="about">
       <div class="container">
         <h2>Sobre mí</h2>
-        <p>${aboutMe}</p>
+        <p>${aboutMe.p1}</p>
+        <p>${aboutMe.p2}</p>
+        <p>${aboutMe.p3}</p>
+        <img src="yo-gato.webp" alt="yo-Bolivia" class='avatar'/>
       </div>
     </section>
   `;
