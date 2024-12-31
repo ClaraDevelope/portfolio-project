@@ -413,19 +413,21 @@ h3 {
   .project-actions {
     position: absolute;
     bottom: 0;
-    top: 95%;
+    /* top: 95%; */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    margin: 0;
+    left: 10px;
   }
   .btn-primary,
   .btn-secondary {
+    /* width: 100%; */
     padding: 8px 12px;
     border-radius: 6px;
     font-weight: bold;
-    font-size: 14px;
-    margin-left: 0.7rem;
-    margin-bottom: 3rem;
+    font-size: 13px;
+    /* margin-left: 0.7rem;
+    margin-bottom: 3rem; */
   }
   .tech-stack {
     margin-bottom: 5rem;
