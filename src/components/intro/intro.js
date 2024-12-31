@@ -14,7 +14,7 @@ export default function renderIntro() {
             <div class="btn-container">
               <a href="https://github.com/tu-github" target="_blank" class="btn-rrss"><i class="fab fa-github"></i></a>
               <a href="https://www.linkedin.com/in/tu-linkedin" target="_blank" class="btn-rrss"><i class="fab fa-linkedin"></i></a>
-              <a href="/cv.pdf" target="_blank" class="btn-rrss"><i class="fas fa-file-download"></i></a>
+              <a href="/CV Clara Manzano. Desarrollo web.pdf" target="_blank" class="btn-rrss"><i class="fas fa-file-download"></i></a>
             </div>
           </div>
         </div>
