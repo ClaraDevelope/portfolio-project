@@ -3,7 +3,7 @@ export default function renderFooter() {
   footer.innerHTML = `
     <footer>
       <div class="container">
-        <p> 2024 Clara Manzano Corona | <a href="https://github.com/clara-manzano" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/clara-manzano/" target="_blank">LinkedIn</a></p>
+         <p>© 2024 Clara Manzano Corona | Código abierto para aprendizaje y colaboración | <a href="https://github.com/ClaraDevelope" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/clara-manzano-corona/" target="_blank">LinkedIn</a></p>
       </div>
     </footer>
   `;

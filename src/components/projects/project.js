@@ -19,9 +19,13 @@ export default function renderProjects() {
           .join('')}
         </div>
         <div class="project-actions">
-          <a href="${project.url}" target="_blank" class="btn-primary">Ver Proyecto</a>
-          <a href="${project.gitHub}" target="_blank" class="btn-secondary">Ver en GitHub</a>
-        </div>
+  <a href="${project.url}" target="_blank" class="btn-primary">
+    <i class="fas fa-link"></i> Ver Proyecto
+  </a>
+  <a href="${project.gitHub}" target="_blank" class="btn-secondary">
+    <i class="fab fa-github"></i> Ver en GitHub
+  </a>
+</div>
       </div>
     `;
   }).join('');

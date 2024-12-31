@@ -361,23 +361,24 @@ h3 {
 }
 
 .project-actions {
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; */
   position: absolute;
   bottom: 0;
+  margin-left: 30px;
 }
 
 .btn-primary,
 .btn-secondary {
   text-decoration: none;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   border-radius: 6px;
   font-weight: bold;
-  margin: 1rem;
+  margin: 0.5rem;
   display: inline-block;
 }
 
 .btn-primary {
-  background-color: #ff2a68;
+  background: linear-gradient(90deg, #ff2a68, #e63946);
   color: white;
 }
 
@@ -386,9 +387,11 @@ h3 {
   color: white;
 }
 
-.btn-primary:hover,
+.btn-primary:hover {
+  background: linear-gradient(90deg, #d42d3b, #4d3d74);
+}
 .btn-secondary:hover {
-  opacity: 0.9;
+  background-color: #575e65;
 }
 
 @media (max-width: 1385px) {
@@ -398,9 +401,8 @@ h3 {
   .tech-stack {
     margin-bottom: 7.5rem;
   }
-  .btn-primary,
-  .btn-secondary {
-    margin-left: 0.5rem;
+  .project-actions {
+    margin-right: 50px;
   }
 }
 
@@ -525,15 +527,17 @@ h3 {
 .contact button {
   padding: 12px 20px;
   background: linear-gradient(90deg, #ff2a68, #e63946);
-  color: white;
+  color: rgb(245, 244, 244);
   border: none;
   border-radius: 5px;
-  margin-top: 20px;
   cursor: pointer;
+  font-size: 15px;
+  margin: 0;
+  margin-top: 20px;
 }
 
 .contact button:hover {
-  background: linear-gradient(90deg, #e63946, #5f4b8b);
+  background: linear-gradient(90deg, #d42d3b, #4d3d74);
 }
 
 footer {
