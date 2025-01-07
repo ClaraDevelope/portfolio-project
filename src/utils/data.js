@@ -1,52 +1,52 @@
 export const PROJECTS = [
-  {
-    name: 'Pinterest',
-    description:
-      'Permite buscar imágenes mediante la API de Unsplash. Inspirada en Pinterest, los usuarios ingresan términos para encontrar fotos de alta calidad. Optimizada para una navegación fluida y visualmente atractiva',
-    imgUrl: 'pinterest.webp',
-    imgUrl2: 'pinterest2.webp',
-    gitHub: 'https://github.com/ClaraDevelope/pinterest',
-    url: 'https://rococo-beignet-b1d97b.netlify.app/',
-    technologies: [
-      {
-        name: 'HTML',
-        img: 'https://cdn-icons-png.flaticon.com/256/174/174854.png'
-      },
-      {
-        name: 'CSS',
-        img: 'https://daoliveros7.github.io/DSW-DayronOliveros/fase3/img/css.png'
-      },
-      {
-        name: 'JavaScript',
-        img: 'https://cdn.iconscout.com/icon/free/png-256/javascript2752148-2284965.png'
-      },
-      { name: 'Vite', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1200px-Vitejs-logo.svg.png' }
-    ]
-  },
-  {
-    name: 'Games-Hub',
-    description:
-      'Incluye Memory, Tres en Raya y Trivial, desarrollados con JavaScript, HTML y CSS. Memory empareja tarjetas, Tres en Raya enfrenta al usuario contra la máquina, y Trivial ofrece preguntas categorizadas con lógica basada en eventos.',
-    imgUrl: 'games.webp',
-    imgUrl2:'games2.webp',
-    url: 'https://games-hub-git-master-claras-projects-939a82ac.vercel.app/',
-    gitHub: 'https://github.com/ClaraDevelope/gamesHub',
-    technologies: [
-      {
-        name: 'HTML',
-        img: 'https://cdn-icons-png.flaticon.com/256/174/174854.png'
-      },
-      {
-        name: 'CSS',
-        img: 'https://daoliveros7.github.io/DSW-DayronOliveros/fase3/img/css.png'
-      },
-      {
-        name: 'JavaScript',
-        img: 'https://cdn.iconscout.com/icon/free/png-256/javascript2752148-2284965.png'
-      },
-      { name: 'Vite', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1200px-Vitejs-logo.svg.png' }
-    ]
-  },
+  // {
+  //   name: 'Pinterest',
+  //   description:
+  //     'Permite buscar imágenes mediante la API de Unsplash. Inspirada en Pinterest, los usuarios ingresan términos para encontrar fotos de alta calidad. Optimizada para una navegación fluida y visualmente atractiva',
+  //   imgUrl: 'pinterest.webp',
+  //   imgUrl2: 'pinterest2.webp',
+  //   gitHub: 'https://github.com/ClaraDevelope/pinterest',
+  //   url: 'https://rococo-beignet-b1d97b.netlify.app/',
+  //   technologies: [
+  //     {
+  //       name: 'HTML',
+  //       img: 'https://cdn-icons-png.flaticon.com/256/174/174854.png'
+  //     },
+  //     {
+  //       name: 'CSS',
+  //       img: 'https://daoliveros7.github.io/DSW-DayronOliveros/fase3/img/css.png'
+  //     },
+  //     {
+  //       name: 'JavaScript',
+  //       img: 'https://cdn.iconscout.com/icon/free/png-256/javascript2752148-2284965.png'
+  //     },
+  //     { name: 'Vite', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1200px-Vitejs-logo.svg.png' }
+  //   ]
+  // },
+  // {
+  //   name: 'Games-Hub',
+  //   description:
+  //     'Incluye Memory, Tres en Raya y Trivial, desarrollados con JavaScript, HTML y CSS. Memory empareja tarjetas, Tres en Raya enfrenta al usuario contra la máquina, y Trivial ofrece preguntas categorizadas con lógica basada en eventos.',
+  //   imgUrl: 'games.webp',
+  //   imgUrl2:'games2.webp',
+  //   url: 'https://games-hub-git-master-claras-projects-939a82ac.vercel.app/',
+  //   gitHub: 'https://github.com/ClaraDevelope/gamesHub',
+  //   technologies: [
+  //     {
+  //       name: 'HTML',
+  //       img: 'https://cdn-icons-png.flaticon.com/256/174/174854.png'
+  //     },
+  //     {
+  //       name: 'CSS',
+  //       img: 'https://daoliveros7.github.io/DSW-DayronOliveros/fase3/img/css.png'
+  //     },
+  //     {
+  //       name: 'JavaScript',
+  //       img: 'https://cdn.iconscout.com/icon/free/png-256/javascript2752148-2284965.png'
+  //     },
+  //     { name: 'Vite', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1200px-Vitejs-logo.svg.png' }
+  //   ]
+  // },
   {
     name: 'FandomFiesta',
     description:
