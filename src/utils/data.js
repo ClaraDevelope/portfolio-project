@@ -47,14 +47,50 @@ export const PROJECTS = [
   //     { name: 'Vite', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1200px-Vitejs-logo.svg.png' }
   //   ]
   // },
+  // {
+  //   name: 'FandomFiesta',
+  //   description:
+  //     'Permite descubrir, crear y gestionar eventos inspirados en series y películas como Friends y Marvel. Incluye autenticación segura y funciones para editar perfiles e interactuar con otros usuarios.',
+  //     imgUrl: 'fandom.webp',
+  //     imgUrl2:'fandom2.webp',
+  //   url: 'https://proyecto-10-enrutado-claras-projects-939a82ac.vercel.app/',
+  //   gitHub: 'https://github.com/ClaraDevelope/proyecto-10-enrutado',
+  //   technologies: [
+  //     {
+  //       name: 'HTML',
+  //       img: 'https://cdn-icons-png.flaticon.com/256/174/174854.png'
+  //     },
+  //     {
+  //       name: 'CSS',
+  //       img: 'https://daoliveros7.github.io/DSW-DayronOliveros/fase3/img/css.png'
+  //     },
+  //     {
+  //       name: 'JavaScript',
+  //       img: 'https://cdn.iconscout.com/icon/free/png-256/javascript2752148-2284965.png'
+  //     },
+  //     {
+  //       name: 'Node.js',
+  //       img: 'https://miro.medium.com/v2/resize:fit:900/1*TY9uBBO9leUbRtlXmQBiug.png'
+  //     },
+  //     {
+  //       name: 'MongoDB',
+  //       img: 'https://api.civo.com/k3s-marketplace/mongodb.png'
+  //     },
+  //     {
+  //       name: 'Express.js',
+  //       img:'https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/20/express-js.png'
+  //     },
+  //     { name: 'Vite', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1200px-Vitejs-logo.svg.png' }
+  //   ]
+  // },
   {
-    name: 'FandomFiesta',
+    name: 'Eclipso',
     description:
-      'Permite descubrir, crear y gestionar eventos inspirados en series y películas como Friends y Marvel. Incluye autenticación segura y funciones para editar perfiles e interactuar con otros usuarios.',
-      imgUrl: 'fandom.webp',
-      imgUrl2:'fandom2.webp',
-    url: 'https://proyecto-10-enrutado-claras-projects-939a82ac.vercel.app/',
-    gitHub: 'https://github.com/ClaraDevelope/proyecto-10-enrutado',
+      'Permite descubrir, crear y gestionar eventos culturales y de ocio en tu ciudad, como conciertos, exposiciones y actividades locales. Incluye autenticación segura y funciones para editar tu perfil y gestionar los eventos que crees.',
+      imgUrl: 'eclipso.webp',
+      imgUrl2:'eclipso2.webp',
+    url: 'https://eclipso-front.vercel.app/',
+    gitHub: 'https://github.com/ClaraDevelope/eclipso',
     technologies: [
       {
         name: 'HTML',
