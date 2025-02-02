@@ -51,8 +51,8 @@ export const PROJECTS = [
     name: 'Eclipso',
     description:
       'Permite descubrir, crear y gestionar eventos culturales y de ocio en tu ciudad, como conciertos, exposiciones y actividades locales. Incluye autenticación segura y funciones para editar tu perfil y gestionar los eventos que crees.',
-      imgUrl: 'eclipso.webp',
-      imgUrl2:'eclipso2.webp',
+      imgUrl: 'eclipso1.1.webp',
+      imgUrl2:'eclipso-2.2.webp',
     url: 'https://eclipso-front.vercel.app/',
     gitHub: 'https://github.com/ClaraDevelope/eclipso',
     technologies: [
