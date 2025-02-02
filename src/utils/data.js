@@ -155,6 +155,16 @@ export const PROJECTS = [
 
 
 export const TECHNOLOGIES = {
+  laguages:[
+    {
+      name: 'JavaScript ES6',
+      img: 'https://cdn.iconscout.com/icon/free/png-256/javascript2752148-2284965.png'
+    },
+    {
+      name:'TypeScript',
+      img:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png'
+    }
+  ],
   frontend: [
     {
       name: 'HTML5',
@@ -163,10 +173,6 @@ export const TECHNOLOGIES = {
     {
       name: 'CSS3',
       img: 'https://daoliveros7.github.io/DSW-DayronOliveros/fase3/img/css.png'
-    },
-    {
-      name: 'JavaScript ES6',
-      img: 'https://cdn.iconscout.com/icon/free/png-256/javascript2752148-2284965.png'
     },
     {
       name: 'React',
@@ -179,10 +185,6 @@ export const TECHNOLOGIES = {
     {
       name: 'Next.js',
       img:'https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png'
-    },
-    {
-      name:'TypeScript',
-      img:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png'
     }
   ],
   backend: [
