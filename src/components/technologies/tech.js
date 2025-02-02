@@ -1,17 +1,16 @@
-import { TECHNOLOGIES } from "../../utils/data.js";
+import { CATEGORY_NAMES, TECHNOLOGIES } from "../../utils/data.js";
 
 export default function renderTechnologies() {
   const technologiesContainer = document.getElementById('technologies');
-  
-  // Creamos la estructura de la sección de tecnologías
   technologiesContainer.innerHTML = `
-    <section class="technologies">
-      <h2 class="section-title">Tecnologías</h2>
-      <div class="tech-container">
+  <section class="technologies">
+    <h2 class="section-title">Tecnologías</h2>
+    <div class="tech-container">
+      ${Object.keys(TECHNOLOGIES).map(categoryKey => `
         <div class="tech-category">
-          <h3>Frontend</h3>
+          <h3>${CATEGORY_NAMES[categoryKey] || categoryKey}</h3>
           <div class="tech-items">
-            ${TECHNOLOGIES.frontend.map(tech => `
+            ${TECHNOLOGIES[categoryKey].map(tech => `
               <div class="tech-item">
                 <img src="${tech.img}" alt="${tech.name}" class="tech-icon">
                 <p>${tech.name}</p>
@@ -19,29 +18,8 @@ export default function renderTechnologies() {
             `).join('')}
           </div>
         </div>
-        <div class="tech-category">
-          <h3>Backend</h3>
-          <div class="tech-items">
-            ${TECHNOLOGIES.backend.map(tech => `
-              <div class="tech-item">
-                <img src="${tech.img}" alt="${tech.name}" class="tech-icon">
-                <p>${tech.name}</p>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-        <div class="tech-category">
-          <h3>Herramientas</h3>
-          <div class="tech-items">
-            ${TECHNOLOGIES.herramientas.map(tech => `
-              <div class="tech-item">
-                <img src="${tech.img}" alt="${tech.name}" class="tech-icon">
-                <p>${tech.name}</p>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      </div>
-    </section>
-  `;
+      `).join('')}
+    </div>
+  </section>
+`;
 }

@@ -155,14 +155,14 @@ export const PROJECTS = [
 
 
 export const TECHNOLOGIES = {
-  laguages:[
+  lenguajes: [
     {
       name: 'JavaScript ES6',
       img: 'https://cdn.iconscout.com/icon/free/png-256/javascript2752148-2284965.png'
     },
     {
-      name:'TypeScript',
-      img:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png'
+      name: 'TypeScript',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png'
     }
   ],
   frontend: [
@@ -180,11 +180,11 @@ export const TECHNOLOGIES = {
     },
     {
       name: 'Tailwind CSS',
-      img:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png'
+      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png'
     },
     {
       name: 'Next.js',
-      img:'https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png'
+      img: 'https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png'
     }
   ],
   backend: [
@@ -203,25 +203,67 @@ export const TECHNOLOGIES = {
     {
       name: 'MongoDB',
       img: 'https://api.civo.com/k3s-marketplace/mongodb.png'
+    }
+  ],
+  basesDeDatos: [ 
+    {
+      name: 'MongoDB',
+      img: 'https://api.civo.com/k3s-marketplace/mongodb.png'
     },
     {
-      name: 'Cloudinary',
-      img: 'https://alternative.me/media/256/cloudinary-icon-mmlef9w15ush8bou-c.png'
+      name: 'SQL',
+      img: 'https://www.bigbaydata.com/wp-content/uploads/2022/11/sql_ejercicios.png'
     },
+    {
+      name: 'Cloudinary', 
+      img: 'https://alternative.me/media/256/cloudinary-icon-mmlef9w15ush8bou-c.png'
+    }
   ],
-  herramientas: [
-    {name: 'Git', img:'https://victorroblesweb.es/wp-content/uploads/2018/04/git.png'},
-    {name: 'Jest', img:'https://media.licdn.com/dms/image/v2/C5612AQFXsMnEK7VChw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1609332478270?e=2147483647&v=beta&t=w6cUBn-KL4rR6fq5lMiBKEu3lrtzu0AVw72ROmHWbZs'},
-    {name: 'Insomnia', img: 'https://s3.amazonaws.com/s3.roaringapps.com/assets/icons/1561251841927-Insomnia.png'},
+  herramientasDesarrollo: [ 
+    {
+      name: 'Git',
+      img: 'https://victorroblesweb.es/wp-content/uploads/2018/04/git.png'
+    },
+    {
+      name: 'Jest',
+      img: 'https://media.licdn.com/dms/image/v2/C5612AQFXsMnEK7VChw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1609332478270?e=2147483647&v=beta&t=w6cUBn-KL4rR6fq5lMiBKEu3lrtzu0AVw72ROmHWbZs'
+    },
+    {
+      name: 'Insomnia',
+      img: 'https://s3.amazonaws.com/s3.roaringapps.com/assets/icons/1561251841927-Insomnia.png'
+    },
     {
       name: 'Vite',
       img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1200px-Vitejs-logo.svg.png'
+    }
+  ],
+  seguridad: [ 
+    {
+      name: 'Json Web Token',
+      img: 'https://media.licdn.com/dms/image/D4D12AQHSCcu92RclAw/article-cover_image-shrink_720_1280/0/1718733973021?e=2147483647&v=beta&t=TJQxW_-k7g3-ukGI-NvdEu_ui9_TeZ-GVrdp_KjjLCc'
     },
     {
-      name:'Json Web Token',
-      img: 'https://media.licdn.com/dms/image/D4D12AQHSCcu92RclAw/article-cover_image-shrink_720_1280/0/1718733973021?e=2147483647&v=beta&t=TJQxW_-k7g3-ukGI-NvdEu_ui9_TeZ-GVrdp_KjjLCc'
+      name: 'Auth0',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Logo_de_Auth0.svg/2560px-Logo_de_Auth0.svg.png'
     }
+  ],
+  diseño:[
+    {name: 'Figma',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1200px-Figma-logo.svg.png'
+    },
+    {name:'Canva',
+      img: 'https://cdn.shopify.com/app-store/listing_images/4d607fca82af8d8553224e715eb16617/icon/CP7Z_quEhYkDEAE=.png'
+    },
   ]
+};
+export const CATEGORY_NAMES = {
+  lenguajes: 'Lenguajes',
+  frontend: 'Frontend',
+  backend: 'Backend',
+  basesDeDatos: 'Bases de Datos', 
+  herramientasDesarrollo: 'Herramientas de Desarrollo', 
+  seguridad: 'Seguridad',
+  diseño: 'Diseño'
 };
 
 // export const aboutMe = 'Soy una persona que encuentra en el desarrollo de software una forma de crear conexiones y resolver necesidades reales. Cada aplicación web que construyo representa una oportunidad para diseñar experiencias que no solo sean funcionales, sino también significativas para quienes las usan. Me esfuerzo por mantener un equilibrio entre la eficiencia técnica y el impacto humano, porque creo que una solución no se mide solo por su funcionamiento, sino por cómo mejora la vida de las personas. Para mí, el proceso importa tanto como el resultado: cada línea de código es un paso hacia construir algo más que tecnología, un puente entre las ideas y quienes las harán parte de su día a día.'
