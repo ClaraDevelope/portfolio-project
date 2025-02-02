@@ -171,6 +171,14 @@ export const TECHNOLOGIES = {
     {
       name: 'React',
       img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgf4FJKwNsetJENnSOiLe8GgNSc1_0Fguf4-0TBaXPmcnIPUHsUbsqfRS_0AjrxhmUDUER28Eeo-MV5aEOcaVOqLepSHNaebbzC9CBH9kl6llfnBCEmhW0E7msdffVZ5i_XR7SqpivDKz8/s1600/reactjs+tutorial.png'
+    },
+    {
+      name: 'Tailwind CSS',
+      img:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png'
+    },
+    {
+      name: 'Next.js',
+      img:'https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png'
     }
   ],
   backend: [
@@ -197,6 +205,7 @@ export const TECHNOLOGIES = {
   ],
   herramientas: [
     {name: 'Git', img:'https://victorroblesweb.es/wp-content/uploads/2018/04/git.png'},
+    {name: 'Jest', img:'https://media.licdn.com/dms/image/v2/C5612AQFXsMnEK7VChw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1609332478270?e=2147483647&v=beta&t=w6cUBn-KL4rR6fq5lMiBKEu3lrtzu0AVw72ROmHWbZs'},
     {name: 'Insomnia', img: 'https://s3.amazonaws.com/s3.roaringapps.com/assets/icons/1561251841927-Insomnia.png'},
     {
       name: 'Vite',
