@@ -179,6 +179,10 @@ export const TECHNOLOGIES = {
     {
       name: 'Next.js',
       img:'https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png'
+    },
+    {
+      name:'TypeScript',
+      img:'https://malcoded.com/_astro/Typescript.ApdKzZht_vchHI.webp'
     }
   ],
   backend: [
