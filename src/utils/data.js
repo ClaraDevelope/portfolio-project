@@ -182,7 +182,7 @@ export const TECHNOLOGIES = {
     },
     {
       name:'TypeScript',
-      img:'https://malcoded.com/_astro/Typescript.ApdKzZht_vchHI.webp'
+      img:'https://es.m.wikipedia.org/wiki/Archivo:Typescript_logo_2020.svg'
     }
   ],
   backend: [
