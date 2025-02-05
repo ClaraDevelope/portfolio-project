@@ -7,8 +7,9 @@ export default function renderHeader() {
         <ul id="nav-links">
           <li><a href="#home">Inicio</a></li>
           <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#certifications">Formación</a></li>
           <li><a href="#technologies">Tecnologías</a></li>
-          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#about">Perfil</a></li>
           <li><a href="#contact">Contacto</a></li>
         </ul>
       </nav>

@@ -5,7 +5,7 @@ export default function renderAbout() {
   about.innerHTML = `
     <section class="about">
       <div class="container">
-        <h2>Sobre mí</h2>
+        <h2>Perfil</h2>
         <p>${aboutMe.p1}</p>
         <p>${aboutMe.p2}</p>
         <p>${aboutMe.p3}</p>
