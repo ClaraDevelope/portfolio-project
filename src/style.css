@@ -621,11 +621,11 @@ footer a:hover {
     border-radius: 50px;
     transition: background 0.3s ease, backdrop-filter 0.3s ease;
   }
-
+  /* 
   nav ul li:first-child,
   nav ul li:last-child {
     width: auto;
-  }
+  } */
 
   nav ul {
     display: none;
@@ -637,7 +637,8 @@ footer a:hover {
     left: 25%;
     z-index: 200;
     padding: 0;
-    border-radius: 10px;
+    border-radius: 8px;
+    gap: 0;
   }
 
   nav ul li {
@@ -652,6 +653,7 @@ footer a:hover {
     font-size: 1.3rem;
     color: #fff;
     text-decoration: none;
+    font-size: 1.1rem;
   }
 
   nav ul li a:hover {

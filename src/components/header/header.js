@@ -18,8 +18,18 @@ export default function renderHeader() {
 
   const menuIcon = document.getElementById('menu-icon');
   const navLinks = document.getElementById('nav-links');
-  menuIcon.addEventListener('click', () => {
+  const menuContainer = document.querySelector('nav');  
+
+  menuIcon.addEventListener('click', (event) => {
     navLinks.classList.toggle('active');
+    event.stopPropagation(); 
+  });
+
+
+  window.addEventListener('click', (event) => {
+    if (!menuContainer.contains(event.target)) {
+      navLinks.classList.remove('active');
+    }
   });
 
   window.addEventListener('scroll', () => {
@@ -32,5 +42,6 @@ export default function renderHeader() {
       console.log('Header not scrolled');
       header.classList.remove('scrolled');
     }
-});
+  });
 }
+
