@@ -25,18 +25,27 @@ fetch("https://backend-portfolio-six-delta.vercel.app/api/v1/contador", {
     "Content-Type": "application/json"
   },
 })
-.then(response => response.json())
+.then(response => {
+  console.log("Respuesta del POST recibido:", response);
+  return response.json();  // Convertimos la respuesta a JSON
+})
 .then(data => {
-  console.log(`Visitas incrementadas: ${data.count}`);
+  console.log(`Visitas incrementadas: ${data.count}`);  // Muestra las visitas incrementadas
   // Después de incrementar, obtenemos el contador actualizado
   return fetch("https://backend-portfolio-six-delta.vercel.app/api/v1/contador/get", {
-    method: "GET",
+    method: "GET",  // Método GET para obtener el contador
     headers: {
       "Content-Type": "application/json"
     },
   });
 })
-.then(response => response.json())
-.then(data => console.log(`Visitas registradas: ${data.count}`))
-.catch(error => console.error("Error al actualizar el contador:", error));
-
+.then(response => {
+  console.log("Respuesta del GET recibido:", response);
+  return response.json();  // Convertimos la respuesta a JSON
+})
+.then(data => {
+  console.log(`Visitas registradas: ${data.count}`);  // Muestra el contador actualizado
+})
+.catch(error => {
+  console.error("Error al actualizar el contador:", error);  // Capturamos cualquier error
+});
