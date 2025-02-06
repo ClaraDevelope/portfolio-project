@@ -273,5 +273,8 @@ export const aboutMe = {p1: 'Me llamo Clara y, aunque mi camino hacia la program
 export const CERTIFICATIONS = [
   {name: "Introducción a la Ingeniería de Software", img: "/UAM.png", url: "https://courses.edx.org/certificates/9e839c780889498db42a5d340f59aada"},
   {name: "Curso SQL", img: "/certificado_SQL.png", url: "https://tutorial-sql.s3.amazonaws.com/certificates/39285_Clara_Manzano/39285_14112024.png"},
+  {name: "Javascript Developer", img:'/Certificado-Javascript.webp'},
+  {name: "Backend Developer", img:'/Certificado-Backend.webp'},
+  {name: "Frontend Developer", img:'/Certificado-Frontend.webp'},
   {name: "Certificado MERN FullStack Developer", img: "/Certificado_FullStack_MERN.png", url: "https://verified.sertifier.com/es/verify/56660557762984/"},
 ]

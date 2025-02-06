@@ -33,13 +33,10 @@ export default function renderHeader() {
   });
 
   window.addEventListener('scroll', () => {
-    console.log('scrolling');  
     const header = document.querySelector('header');
-    if (window.scrollY > 0) {
-      console.log('Header scrolled');  
+    if (window.scrollY > 0) {  
       header.classList.add('scrolled');
-    } else {
-      console.log('Header not scrolled');
+    } else {;
       header.classList.remove('scrolled');
     }
   });
