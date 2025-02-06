@@ -24,6 +24,7 @@ fetch("https://backend-portfolio-six-delta.vercel.app/api/v1/contador", {
   headers: {
     "Content-Type": "application/json"
   },
+  mode: "cors",
 })
 .then(response => {
   console.log("Respuesta del POST recibido:", response);
@@ -37,6 +38,7 @@ fetch("https://backend-portfolio-six-delta.vercel.app/api/v1/contador", {
     headers: {
       "Content-Type": "application/json"
     },
+    mode: "cors", 
   });
 })
 .then(response => {
