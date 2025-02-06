@@ -18,13 +18,25 @@ renderAbout();
 renderContact();
 renderFooter();
 
-fetch("https://backend-portfolio-six-delta.vercel.app/api/v1/contador/get", {
-  method: "GET",
+// Llamada para incrementar el contador
+fetch("https://backend-portfolio-six-delta.vercel.app/api/v1/contador", {
+  method: "POST", // Método POST para incrementar el contador
   headers: {
-      "Content-Type": "application/json"
+    "Content-Type": "application/json"
   },
-  // mode: "cors", // Asegúrate de que se esté usando CORS correctamente
+})
+.then(response => response.json())
+.then(data => {
+  console.log(`Visitas incrementadas: ${data.count}`);
+  // Después de incrementar, obtenemos el contador actualizado
+  return fetch("https://backend-portfolio-six-delta.vercel.app/api/v1/contador/get", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json"
+    },
+  });
 })
 .then(response => response.json())
 .then(data => console.log(`Visitas registradas: ${data.count}`))
 .catch(error => console.error("Error al actualizar el contador:", error));
+
