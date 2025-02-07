@@ -1,15 +1,5 @@
-import { defineConfig } from 'vite';
-
-export default defineConfig({
-
+module.exports = {
   build: {
-    minify: 'esbuild',
-    terserOptions: {
-      compress: {
-        drop_console: false, 
-      },
-    },
+    outDir: 'dist',
   },
-
-  envPrefix: 'VITE_',
-});
+};
