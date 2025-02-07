@@ -22,25 +22,15 @@ renderFooter();
 let isRequestInProgress = false;
 
 async function incrementarContador() {
-  console.log("Comprobando si la solicitud está en progreso:", isRequestInProgress);
-  
-  if (isRequestInProgress) {
-    console.log("Solicitud en progreso, no se hace nada.");
-    return;
-  }
+  if (isRequestInProgress) return; // Evita solicitudes duplicadas
 
   try {
-    isRequestInProgress = true; 
-    console.log("Iniciando la solicitud de incremento");
+    isRequestInProgress = true;
 
     const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/contador/post`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
     });
-
-    console.log(response);
 
     if (!response.ok) {
       throw new Error(`Error al incrementar el contador: ${response.statusText}`);
@@ -52,8 +42,7 @@ async function incrementarContador() {
   } catch (error) {
     console.error("Error al incrementar el contador:", error);
   } finally {
-    isRequestInProgress = false; 
-    console.log("Solicitud finalizada, flag restablecido.");
+    isRequestInProgress = false;  // Restablece el flag al terminar
   }
 }
 
@@ -62,9 +51,7 @@ async function obtenerContador() {
   try {
     const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/contador/`, {
       method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
     });
 
     if (!response.ok) {
@@ -79,18 +66,17 @@ async function obtenerContador() {
   }
 }
 
+
 async function actualizarContador() {
-  console.log("Llamando a actualizarContador");
   try {
-    const incrementado = await incrementarContador(); 
+    const incrementado = await incrementarContador(); // Incrementa el contador
     if (incrementado !== undefined) {
-      const count = await obtenerContador(); 
+      const count = await obtenerContador();  // Obtiene el contador actualizado
       console.log(`El contador final es: ${count}`);
     }
   } catch (error) {
     console.error("Error en la actualización del contador:", error);
   }
 }
-
 
 actualizarContador();
