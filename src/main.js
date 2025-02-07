@@ -18,36 +18,59 @@ renderAbout();
 renderContact();
 renderFooter();
 
-// Llamada para incrementar el contador
-fetch("https://backend-portfolio-six-delta.vercel.app/api/v1/contador", {
-  method: "POST", // Método POST para incrementar el contador
-  headers: {
-    "Content-Type": "application/json"
-  },
-  mode: "cors",
-})
-.then(response => {
-  console.log("Respuesta del POST recibido:", response);
-  return response.json();  // Convertimos la respuesta a JSON
-})
-.then(data => {
-  console.log(`Visitas incrementadas: ${data.count}`);  // Muestra las visitas incrementadas
-  // Después de incrementar, obtenemos el contador actualizado
-  return fetch("https://backend-portfolio-six-delta.vercel.app/api/v1/contador/get", {
-    method: "GET",  // Método GET para obtener el contador
-    headers: {
-      "Content-Type": "application/json"
-    },
-    mode: "cors", 
-  });
-})
-.then(response => {
-  console.log("Respuesta del GET recibido:", response);
-  return response.json();  // Convertimos la respuesta a JSON
-})
-.then(data => {
-  console.log(`Visitas registradas: ${data.count}`);  // Muestra el contador actualizado
-})
-.catch(error => {
-  console.error("Error al actualizar el contador:", error);  // Capturamos cualquier error
-});
+
+console.log("Base URL en el frontend: ", import.meta.env.VITE_BASE_URL);
+
+async function incrementarContador() {
+  try {
+    const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/contador/post`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    console.log(response);
+
+    if (!response.ok) {
+      throw new Error(`Error al incrementar el contador: ${response.statusText}`);
+    }
+    const data = await response.json();
+    console.log(`Visitas incrementadas: ${data.count}`);
+    return data.count;
+  } catch (error) {
+    console.error("Error al incrementar el contador:", error);
+  }
+}
+
+async function obtenerContador() {
+  try {
+    const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/contador/`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`Error al obtener el contador: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    console.log(`Visitas registradas: ${data.count}`);
+    return data.count;
+  } catch (error) {
+    console.error("Error al obtener el contador:", error);
+  }
+}
+
+async function actualizarContador() {
+  try {
+    await incrementarContador();
+    const count = await obtenerContador();
+    console.log(`El contador final es: ${count}`);
+  } catch (error) {
+    console.error("Error en la actualización del contador:", error);
+  }
+}
+
+actualizarContador();
