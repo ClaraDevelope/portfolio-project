@@ -21,24 +21,34 @@ renderFooter();
 
 console.log("Base URL en el frontend: ", import.meta.env.VITE_BASE_URL);
 
+let isRequestInProgress = false; // Flag para evitar solicitudes duplicadas
+
 async function incrementarContador() {
+  if (isRequestInProgress) return; // Si ya hay una solicitud en curso, no hacer nada
+
   try {
+    isRequestInProgress = true; // Establecer el flag en verdadero para evitar más solicitudes
+
     const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/contador/post`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
     });
+
     console.log(response);
 
     if (!response.ok) {
       throw new Error(`Error al incrementar el contador: ${response.statusText}`);
     }
+
     const data = await response.json();
     console.log(`Visitas incrementadas: ${data.count}`);
     return data.count;
   } catch (error) {
     console.error("Error al incrementar el contador:", error);
+  } finally {
+    isRequestInProgress = false; // Restablecer el flag al finalizar la solicitud
   }
 }
 
@@ -65,9 +75,11 @@ async function obtenerContador() {
 
 async function actualizarContador() {
   try {
-    await incrementarContador();
-    const count = await obtenerContador();
-    console.log(`El contador final es: ${count}`);
+    const incrementado = await incrementarContador(); // Incrementar solo si es posible
+    if (incrementado !== undefined) {
+      const count = await obtenerContador(); // Obtener el contador después de incrementarlo
+      console.log(`El contador final es: ${count}`);
+    }
   } catch (error) {
     console.error("Error en la actualización del contador:", error);
   }
