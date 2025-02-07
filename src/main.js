@@ -19,15 +19,19 @@ renderContact();
 renderFooter();
 
 
-console.log("Base URL en el frontend: ", import.meta.env.VITE_BASE_URL);
-
-let isRequestInProgress = false; // Flag para evitar solicitudes duplicadas
+let isRequestInProgress = false;
 
 async function incrementarContador() {
-  if (isRequestInProgress) return; // Si ya hay una solicitud en curso, no hacer nada
+  console.log("Comprobando si la solicitud está en progreso:", isRequestInProgress);
+  
+  if (isRequestInProgress) {
+    console.log("Solicitud en progreso, no se hace nada.");
+    return;
+  }
 
   try {
-    isRequestInProgress = true; // Establecer el flag en verdadero para evitar más solicitudes
+    isRequestInProgress = true; 
+    console.log("Iniciando la solicitud de incremento");
 
     const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/contador/post`, {
       method: "POST",
@@ -48,9 +52,11 @@ async function incrementarContador() {
   } catch (error) {
     console.error("Error al incrementar el contador:", error);
   } finally {
-    isRequestInProgress = false; // Restablecer el flag al finalizar la solicitud
+    isRequestInProgress = false; 
+    console.log("Solicitud finalizada, flag restablecido.");
   }
 }
+
 
 async function obtenerContador() {
   try {
@@ -74,15 +80,17 @@ async function obtenerContador() {
 }
 
 async function actualizarContador() {
+  console.log("Llamando a actualizarContador");
   try {
-    const incrementado = await incrementarContador(); // Incrementar solo si es posible
+    const incrementado = await incrementarContador(); 
     if (incrementado !== undefined) {
-      const count = await obtenerContador(); // Obtener el contador después de incrementarlo
+      const count = await obtenerContador(); 
       console.log(`El contador final es: ${count}`);
     }
   } catch (error) {
     console.error("Error en la actualización del contador:", error);
   }
 }
+
 
 actualizarContador();
