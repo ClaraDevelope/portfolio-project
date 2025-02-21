@@ -83,6 +83,28 @@ export const PROJECTS = [
       { name: 'Vite', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1200px-Vitejs-logo.svg.png' }
     ]
   },
+  {name: 'EcoJourney', description:'EcoJourney es una aplicación web desarrollada con Next.js que permite planificar viajes con un enfoque sostenible. Usa HERE Maps para autocompletar direcciones, OpenRouteService para calcular rutas y distancias, y Leaflet para la visualización de mapas. La app estima las emisiones de CO₂ según el medio de transporte y sugiere alternativas más ecológicas.',
+    imgUrl: 'ecojourney.webp',
+    imgUrl2:'ecojourney2.webp',
+    url: 'https://ecojourney-phi.vercel.app/',
+    gitHub: 'https://github.com/ClaraDevelope/ecojourney',
+    technologies: [
+      {
+        name: 'NEXT.JS',
+        img: 'https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png'
+      },
+      {
+        name: 'Tailwind CSS',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png'
+      },
+      {
+        name: 'React',
+        img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgf4FJKwNsetJENnSOiLe8GgNSc1_0Fguf4-0TBaXPmcnIPUHsUbsqfRS_0AjrxhmUDUER28Eeo-MV5aEOcaVOqLepSHNaebbzC9CBH9kl6llfnBCEmhW0E7msdffVZ5i_XR7SqpivDKz8/s1600/reactjs+tutorial.png'
+      },
+      { name: 'TypeScript', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png' },
+      {name: 'Webpack', img: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Webpack.png'}
+    ]
+  },
   {
     name: 'HelpyHub',
     description:
@@ -235,7 +257,8 @@ export const TECHNOLOGIES = {
     {
       name: 'Vite',
       img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1200px-Vitejs-logo.svg.png'
-    }
+    },
+    {name: 'Webpack', img: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Webpack.png'}
   ],
   seguridad: [ 
     {
