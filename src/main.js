@@ -22,60 +22,61 @@ renderFooter();
 let isRequestInProgress = false;
 
 async function incrementarContador() {
-  if (isRequestInProgress) return; // Evita solicitudes duplicadas
+  if (isRequestInProgress) return;
 
   try {
     isRequestInProgress = true;
+    console.log("📡 Enviando solicitud para incrementar contador...");
 
-    const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/contador/post`, {
+    const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/contador`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
     });
 
     if (!response.ok) {
-      throw new Error(`Error al incrementar el contador: ${response.statusText}`);
+      throw new Error(`❌ Error al incrementar el contador: ${response.statusText}`);
     }
 
     const data = await response.json();
-    console.log(`Visitas incrementadas: ${data.count}`);
+    console.log(`✅ Visitas incrementadas: ${data.count}`);
     return data.count;
   } catch (error) {
-    console.error("Error al incrementar el contador:", error);
+    console.error("❌ Error al incrementar el contador:", error);
   } finally {
-    isRequestInProgress = false;  // Restablece el flag al terminar
+    isRequestInProgress = false;
   }
 }
 
-
 async function obtenerContador() {
   try {
-    const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/contador/`, {
+    console.log("📡 Solicitando el número total de visitas...");
+
+    const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/contador`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
 
     if (!response.ok) {
-      throw new Error(`Error al obtener el contador: ${response.statusText}`);
+      throw new Error(`❌ Error al obtener el contador: ${response.statusText}`);
     }
 
     const data = await response.json();
-    console.log(`Visitas registradas: ${data.count}`);
+    console.log(`📊 Visitas registradas: ${data.count}`);
     return data.count;
   } catch (error) {
-    console.error("Error al obtener el contador:", error);
+    console.error("❌ Error al obtener el contador:", error);
   }
 }
 
-
 async function actualizarContador() {
   try {
-    const incrementado = await incrementarContador(); // Incrementa el contador
+    const incrementado = await incrementarContador();
     if (incrementado !== undefined) {
-      const count = await obtenerContador();  // Obtiene el contador actualizado
-      console.log(`El contador final es: ${count}`);
+      const count = await obtenerContador();
+      console.log(`🔢 El contador final es: ${count}`);
     }
   } catch (error) {
-    console.error("Error en la actualización del contador:", error);
+    console.error("❌ Error en la actualización del contador:", error);
   }
 }
 
