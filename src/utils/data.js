@@ -294,10 +294,11 @@ export const CATEGORY_NAMES = {
 export const aboutMe = {p1: 'Me llamo Clara y, aunque mi camino hacia la programación no ha sido el más convencional, cada experiencia previa ha enriquecido mi forma de abordar este ámbito. Antes de centrarme en el desarrollo web, trabajé en sectores sociales y educativos, desde la educación social hasta la sexología, además de haber gestionado una librería-café como <strong>socia trabajadora de una cooperativa.</strong>' , p2:"Desde siempre me han interesado las metodologías como herramientas para organizar y entender los procesos. En el ámbito tecnológico, creo que elegir el enfoque adecuado es clave para un desarrollo eficiente y alineado con los objetivos del proyecto. Mi trayectoria en el ámbito social y educativo me ha enseñado a <strong>identificar diferentes necesidades y buscar soluciones adaptadas y sostenibles</strong>, lo que ha despertado mi interés por áreas como la accesibilidad, la calidad del software y la gestión de proyectos. Me motiva seguir explorando cómo aplicar estas perspectivas para <strong>construir productos y procesos que realmente tiendan puentes entre ideas, necesidades y objetivos.</strong>", p3:"Cuando no estoy programando, toco en una batucada de música afrobrasileña, participo en <strong>actividades culturales y sociales</strong> de mi ciudad, me gusta leer sobre diferentes temas y disfrutar de series y películas."}
 
 export const CERTIFICATIONS = [
-  {name: "Introducción a la Ingeniería de Software", img: "/UAM.png", url: "https://courses.edx.org/certificates/9e839c780889498db42a5d340f59aada"},
   {name: "Curso SQL", img: "/certificado_SQL.png", url: "https://tutorial-sql.s3.amazonaws.com/certificates/39285_Clara_Manzano/39285_14112024.png"},
-  {name: "Javascript Developer", img:'/Certificado-Javascript.webp'},
-  {name: "Backend Developer", img:'/Certificado-Backend.webp'},
-  {name: "Frontend Developer", img:'/Certificado-Frontend.webp'},
+  {name: "Javascript Developer", img:'/Certificado-Javascript.webp', url:"https://verified.sertifier.com/en/verify/03621406770418/"},
+  {name: "Backend Developer", img:'/Certificado-Backend.webp', url: "https://verified.sertifier.com/en/verify/99106006683514/"},
+  {name: "Frontend Developer", img:'/Certificado-Frontend.webp', url:"https://verified.sertifier.com/es/verify/67005007706277/"},
   {name: "Certificado MERN FullStack Developer", img: "/Certificado_FullStack_MERN.png", url: "https://verified.sertifier.com/es/verify/56660557762984/"},
+  {name:"Certificado de excelencia académica", img:"/certificado_excelencia.png", url:"https://verified.sertifier.com/es/verify/22221894159946"},
+  {name: "Introducción a la Ingeniería de Software", img: "/UAM.png", url: "https://courses.edx.org/certificates/9e839c780889498db42a5d340f59aada"},
 ]
